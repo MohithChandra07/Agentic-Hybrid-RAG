@@ -1,11 +1,17 @@
 import os
+import sys
 import json
 import csv
 import time
 from datetime import datetime
+
+# Add the agentic_rag folder to the Python path so it can find 'backend'
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), "agentic_rag"))
+
 from evaluation.dataset import SAMPLE_DATASET
 from evaluation.baseline import BaselineRAG
 from evaluation.evaluators import LightweightEvaluator
+# pyrefly: ignore [missing-import]
 from backend.graph import build_graph
 
 class ExperimentRunner:
@@ -46,7 +52,10 @@ class ExperimentRunner:
             # --- 2. RUN AGENTIC RAG ---
             print("  -> Running Critic-Guided Agentic RAG (Experimental)...")
             start_time = time.time()
-            agentic_state = self.agentic_graph.invoke({"original_query": query, "loop_count": 0})
+            agentic_state = self.agentic_graph.invoke(
+                {"original_query": query, "loop_count": 0}, 
+                config={"recursion_limit": 100}
+            )
             agentic_latency = time.time() - start_time
             
             ag_context = "\n".join([d.page_content for d in agentic_state.get("approved_context", [])])
@@ -64,7 +73,7 @@ class ExperimentRunner:
             
             # --- 3. LOG METRICS ---
             result = {
-                "query_id": item["id"],
+                "query_id": item.get("id", 1),
                 "query": query,
                 "domain": item["category"],
                 

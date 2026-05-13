@@ -1,0 +1,17 @@
+[
+    {
+        "query": "What is a vector database and how is it used in RAG?",
+        "difficulty": "Easy",
+        "category": "Domain-Specific"
+    },
+    {
+        "query": "Explain the two key heuristics used in Kruskal's algorithm.",
+        "difficulty": "Medium",
+        "category": "Algorithmic"
+    },
+    {
+        "query": "What did Einstein say about RAG systems?",
+        "difficulty": "Hard",
+        "category": "Trick Question"
+    }
+]

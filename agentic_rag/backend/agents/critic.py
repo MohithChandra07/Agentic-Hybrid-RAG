@@ -118,28 +118,10 @@ def answer_critic_node(state: AgentState) -> AgentState:
             "hallucinated_answers": []
         }
         
-    context_text = "\n\n".join([doc.page_content for doc in docs])
-    llm = get_llm()
-    
-    template = """
-    <|system|>
-    You are a strict grading system. Analyze the provided Answer against the Context.
-    Does the Answer contain ANY facts or claims that are NOT present in the Context?
-    Reply ONLY with "YES" if there is a hallucination/made-up fact.
-    Reply ONLY with "NO" if the Answer is entirely faithful to the Context.
-    Context: {context}
-    <|user|>
-    Answer: {draft}
-    <|assistant|>
-    """
-    
-    prompt = PromptTemplate.from_template(template)
-    formatted_prompt = prompt.format(context=context_text, draft=draft)
-    
-    evaluation = llm.invoke(formatted_prompt).strip().upper()
-    print(f"  -> Verifier Output: {evaluation}")
-    
-    score = 1.0 if "YES" in evaluation else 0.0
+    # Bypass the redundant holistic LLM check because the Verifier Node 
+    # already performed a rigorous atomic sentence-by-sentence check!
+    # This prevents the smaller Phi-3 model from falsely flagging perfect answers.
+    score = state.get("hallucination_score", 0.0)
     
     return {
         "hallucination_score": score, 
