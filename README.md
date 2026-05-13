@@ -10,9 +10,7 @@
 
 ---
 
-## Resume-Friendly Project Summary
-
-> **For AI/ML internship applications, GenAI roles, and research interviews.**
+## Project Summary
 
 Designed and implemented a multi-agent RAG system in Python using **LangGraph** for orchestration, addressing documented limitations of standard RAG pipelines. The system coordinates 7 specialized agents across planning, hybrid retrieval, critic-guided validation, atomic fact-checking, and web fallback. Engineering improvements over the RAG-Critic ACL 2025 baseline include an **Adaptive Retrieval Policy** (reducing unnecessary compute by routing queries to shallow `k=3` vs. deep `k=10` Cross-Encoder pipelines), an **Atomic Claim Verifier** for sentence-level hallucination risk scoring, and a **Semantic Failure Memory** module backed by ChromaDB to prevent recurring retrieval failures. Evaluated across Faithfulness, Hallucination Rate, Retrieval Precision, and Latency benchmarks using an automated evaluation suite.
 
