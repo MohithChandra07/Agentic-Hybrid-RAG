@@ -1,0 +1,158 @@
+AGENTIC RAG - TEST QUESTIONS
+
+These questions are grouped by type.
+Use them to test different capabilities of your system.
+
+
+>>>>>>>>>>>>>>>>>>>>CATEGORY 1: LOCAL KNOWLEDGE BASE QUESTIONS
+(knowledge_base questions)
+
+
+Q1. Who was the first person to walk on the Moon?
+Q2. What is the chemical symbol for gold?
+Q3. Who wrote Pride and Prejudice?
+Q4. When did World War II end?
+Q5. What is the largest planet in the solar system?
+Q6. Who painted the Mona Lisa?
+Q7. Who invented the telephone?
+Q8. What year was the Eiffel Tower built?
+Q9. What is the capital of Australia?
+Q10. Who founded Microsoft?
+
+EXPECTED BEHAVIOR: RAG retrieves from local passages. No internet needed.
+
+
+>>>>>>>>>>>>>>>>>>CATEGORY 2: INTERNET-REQUIRED QUESTIONS (LIVE/RECENT)
+(MUST go to internet — not in local knowledge base)
+
+
+Q11. What is the latest version of Python released?
+Q12. Who is the current Prime Minister of India?
+Q13. What was the score of the last IPL match?
+Q14. What is the current price of Bitcoin?
+Q15. What is the latest news about AI in 2025?
+Q16. Who won the most recent Nobel Prize in Physics?
+Q17. What is the current population of the world?
+Q18. What new AI models were released in 2025?
+Q19. What is the weather like in Delhi today?
+Q20. What are the latest updates on the Mars mission?
+
+EXPECTED BEHAVIOR: RAG finds nothing locally → agent triggers internet search → answers with live data.
+THIS IS YOUR KEY CONTRIBUTION — showcase this behavior!
+
+
+>>>>>>>>>>>>>>>>>>CATEGORY 3: MULTI-HOP QUESTIONS
+(Needs combining info from 2+ sources — tests agent reasoning)
+
+
+Q21. Who is older — the founder of Apple or the founder of Microsoft, and what companies did they build?
+Q22. What is the capital of the country where the Eiffel Tower is located?
+Q23. Who directed the movie that won the Oscar for Best Picture in 2020, and what other films has that director made?
+Q24. What programming language was created by the person who also created Python, and when was it first released?
+Q25. Which country invented the sport that Roger Federer is famous for, and when did it become an Olympic sport?
+Q26. Who founded the company that makes the operating system used on most smartphones, and where was that person born?
+Q27. What is the currency of the country that has the longest coastline in the world?
+Q28. Who wrote the book that the movie Forrest Gump is based on, and what other books did they write?
+Q29. In what city was the inventor of the World Wide Web born, and what country is that city in?
+Q30. What is the national animal of the country with the largest population in the world?
+
+EXPECTED BEHAVIOR: Agent breaks the question into parts, retrieves separately, then combines. Shows planning + reasoning.
+
+
+>>>>>>>>>>>>>>>>>>CATEGORY 4: LOCAL + INTERNET HYBRID QUESTIONS
+(Partly in knowledge base, partly needs internet)
+
+Q31. Who founded Apple and what is Apple's latest product in 2025?
+Q32. What is machine learning and what are the most popular ML frameworks right now?
+Q33. What causes earthquakes and where was the most recent major earthquake?
+Q34. How do vaccines work and what new vaccines were approved in 2025?
+Q35. What is blockchain and what is the current price of Ethereum?
+Q36. When was Google founded and what is Google's latest AI product?
+Q37. What does DNA stand for and what are the latest breakthroughs in DNA research?
+Q38. Who invented the internet and what are the latest internet speed records?
+Q39. What is climate change and what climate agreements were signed in 2025?
+Q40. Who is Elon Musk and what company did he start most recently?
+
+EXPECTED BEHAVIOR: Agent uses local knowledge for background, then goes online for the "latest/current" part. Best for showing hybrid retrieval.
+
+
+>>>>>>>>>>>>>>>>>>CATEGORY 5: REASONING & COMPARISON QUESTIONS
+(Tests if your agent can reason, not just retrieve)
+
+Q41. Is Python better than Java for machine learning? Explain with reasons.
+Q42. What are the differences between RAG and fine-tuning an LLM?
+Q43. Compare traditional search engines with AI-powered search.
+Q44. What are the advantages of agentic RAG over simple RAG?
+Q45. Should a student learn Python or JavaScript first? Why?
+Q46. What are the pros and cons of using cloud storage vs local storage?
+Q47. How is artificial intelligence different from machine learning and deep learning?
+Q48. Compare the education systems of India and the USA.
+Q49. What are the differences between SQL and NoSQL databases?
+Q50. Is renewable energy more cost-effective than fossil fuels in 2025?
+
+EXPECTED BEHAVIOR: Agent retrieves facts from multiple sources and generates a reasoned, comparative answer.
+
+
+>>>>>>>>>>>>>>>>>>CATEGORY 6: TRICK / STRESS TEST QUESTIONS
+(Tests robustness — what happens when RAG fails or is confused)
+
+Q51. What is the capital of the moon?
+Q52. Who won the cricket World Cup in 2087?
+Q53. What did Einstein say about RAG systems?
+Q54. Tell me about a country called "Zindaria".
+Q55. What is the GDP of Hogwarts?
+Q56. Who is the CEO of a company that does not exist?
+Q57. What is the latest news from Mars colony in 2025?
+Q58. Translate this to "Dragonish" language: Hello World.
+Q59. What happened on February 30, 2024?
+Q60. What is the population of the internet?
+
+EXPECTED BEHAVIOR: Your agent should gracefully say it cannot find credible information, rather than hallucinating. Tests your system's reliability.
+
+
+>>>>>>>>>>>>>>>>>>CATEGORY 7: DOMAIN-SPECIFIC (for research paper depth)
+
+Q61. What is retrieval-augmented generation and how does it work?
+Q62. What are the main components of a RAG pipeline?
+Q63. What is a vector database and how is it used in RAG?
+Q64. What is the difference between dense and sparse retrieval?
+Q65. What is hallucination in LLMs and how does RAG reduce it?
+Q66. What is chunking in RAG and why does it matter?
+Q67. What are embeddings and how are they used in semantic search?
+Q68. What is the difference between BM25 and cosine similarity forwt hp retrieval?
+Q69. What are agentic design patterns like reflection, planning, and tool use?
+Q70. What makes a RAG system "agentic"?
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>1. Advanced Graph Algorithms and Efficiency
+
+71.How does the Bellman-Ford algorithm detect a negative-weight cycle, and why does it have a time complexity of O(V * E)?
+
+72.What is the purpose of Floyd-Warshall's algorithm, and how does its dynamic programming approach result in an O(V^3) time complexity?
+
+73.Explain the two key heuristics (Union-by-Rank and Path Compression) used with the Disjoint-Set structure in Kruskal's algorithm, and how they contribute to its O(E log E) efficiency.
+
+74.What is the functional difference between Breadth-First Search (BFS) and Depth-First Search (DFS) in graph traversal?
+
+75.  What advantage does the Bellman-Ford algorithm have over Dijkstra's algorithm?
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2. Algorithmic Paradigms and Logic
+
+76.  Compare and contrast Dynamic Programming and Greedy Algorithms regarding their approach (top-down vs. bottom-up) and whether they guarantee an **optimal result.
+
+77.  How is Huffman Coding classified as a greedy algorithm, and what specific property must the resulting code have?
+
+78.  Explain the solution mechanism for the N-Queens Problem** using Backtracking, and state the theoretical worst-case time complexity.
+
+79.  Describe the core functionality and respective time complexities of the Rabin-Karp and KMP pattern matching algorithms.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>3. Sorting and Computational Complexity (P vs. NP)
+
+80. Explain why Counting Sort is considered linear time O(n+k), and what assumption about the input data makes this possible.
+
+81. Define the difference between a Hamiltonian Cycle and an **Eulerian Cycle.
+
+82. What two conditions must a problem meet to be definitively classified as NP-Complete (NPC), and what does this imply about finding a solution?
+
+83. How does the concept of a "certificate" relate to the ability to efficiently verify solutions for problems in Class NP?
+

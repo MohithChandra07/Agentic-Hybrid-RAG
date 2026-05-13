@@ -1,0 +1,59 @@
+QUERY: When did the first iPhone come out?
+ANSWER: June 29, 2007
+
+QUERY: Who is the CEO of Tesla?
+ANSWER: Elon Musk
+
+QUERY: How many states are in the United States?
+ANSWER: 50
+
+QUERY: What is the tallest mountain in the world?
+ANSWER: Mount Everest (8,848.86 metres / 29,031.7 feet)
+
+QUERY: When was Google founded?
+ANSWER: September 4, 1998
+
+QUERY: What is the population of India?
+ANSWER: Approximately 1.4 billion (as of 2024)
+
+QUERY: Who invented the World Wide Web?
+ANSWER: Tim Berners-Lee
+
+QUERY: What is the boiling point of water in Celsius?
+ANSWER: 100 degrees Celsius at standard atmospheric pressure
+
+QUERY: How far is the Moon from Earth?
+ANSWER: Approximately 384,400 kilometers (238,855 miles) on average
+
+QUERY: Who wrote the play Hamlet?
+ANSWER: William Shakespeare
+
+QUERY: What is the currency of Japan?
+ANSWER: Japanese Yen (JPY)
+
+QUERY: When did India gain independence?
+ANSWER: August 15, 1947
+
+QUERY: What does CPU stand for?
+ANSWER: Central Processing Unit
+
+QUERY: Who founded Microsoft?
+ANSWER: Bill Gates and Paul Allen
+
+QUERY: What is the largest ocean on Earth?
+ANSWER: The Pacific Ocean
+
+QUERY: How many chromosomes do humans have?
+ANSWER: 46 (23 pairs)
+
+QUERY: What is the national animal of India?
+ANSWER: Bengal Tiger
+
+QUERY: In what year was Facebook founded?
+ANSWER: 2004
+
+QUERY: Who is the author of the Sherlock Holmes stories?
+ANSWER: Arthur Conan Doyle
+
+QUERY: What does DNA stand for?
+ANSWER: Deoxyribonucleic Acid

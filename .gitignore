@@ -1,0 +1,14 @@
+# Large Language Model File (MUST NOT be committed)
+Phi-3-mini-4k-instruct-q4.gguf 
+*.gguf
+
+# Vector Database (MUST NOT be committed)
+/db/
+
+# Python Cache and Environment Files
+__pycache__/
+venv/
+.env
+
+# Streamlit-specific cache
+.streamlit/

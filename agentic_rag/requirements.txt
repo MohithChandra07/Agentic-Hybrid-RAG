@@ -1,0 +1,10 @@
+langgraph
+langchain
+langchain-community
+langchain-core
+pydantic-settings
+rank_bm25
+duckduckgo-search
+pandas
+matplotlib
+seaborn

@@ -1,0 +1,9 @@
+# Large RAG Files to Ignore
+Phi-3-mini-4k-instruct-q4.gguf
+*.gguf
+/db/
+
+# Standard Python Files to Ignore
+__pycache__/
+venv/
+.env

@@ -1,0 +1,39 @@
+PASSAGE_ID: hp_001
+TOPIC: Corliss Archer / Kiss and Tell
+Shirley Temple played Corliss Archer in the 1945 film Kiss and Tell. After her acting career, Shirley Temple Black went into politics and diplomacy. She served as U.S. Ambassador to Ghana and later as U.S. Ambassador to Czechoslovakia. She also served as Chief of Protocol of the United States, which is a position in the State Department equivalent to Attorney General in diplomatic terms. She was the first woman to serve as Chief of Protocol.
+
+PASSAGE_ID: hp_002
+TOPIC: The Owl House
+The Owl House is an American fantasy animated television series. It is based on a book series of the same name. The anime adaptation has been animated by Wit Studio and Science SARU, two prominent Japanese animation studios. The series is classified as a science fantasy young adult series and has garnered a large fanbase internationally.
+
+PASSAGE_ID: hp_003
+TOPIC: Arthur's Magazine vs First for Women
+Arthur's Magazine was an American literary magazine published from 1844 to 1898. First for Women is a woman's magazine that was started in 1989. Therefore Arthur's Magazine was started first, predating First for Women by over 140 years.
+
+PASSAGE_ID: hp_004
+TOPIC: Albert Einstein vs Nikola Tesla birth year
+Albert Einstein was born on March 14, 1879, in Ulm, Kingdom of Württemberg, German Empire. Nikola Tesla was born on July 10, 1856, in Smiljan, Austrian Empire (modern-day Croatia). Therefore Nikola Tesla was born first, being approximately 23 years older than Einstein.
+
+PASSAGE_ID: hp_005
+TOPIC: Forrest Gump
+Forrest Gump is a 1994 American comedy-drama film directed by Robert Zemeckis. It is based on the 1986 novel of the same name by Winston Groom. The film stars Tom Hanks in the title role. It was released on July 6, 1994 and became one of the highest-grossing films of that year.
+
+PASSAGE_ID: hp_006
+TOPIC: Steve Jobs birthplace
+Steve Jobs was born on February 24, 1955, in San Francisco, California, United States. He was the co-founder, chairman, and CEO of Apple Inc., the company that created the iPhone, iPad, and Mac computers. He was adopted by Paul and Clara Jobs and grew up in the San Francisco Bay Area.
+
+PASSAGE_ID: hp_007
+TOPIC: J.K. Rowling
+J.K. Rowling, full name Joanne Rowling, is a British author best known for writing the Harry Potter fantasy series. She was born on 31 July 1965 in Yate, Gloucestershire, England. The Harry Potter series has sold over 500 million copies worldwide and has been adapted into a highly successful film series.
+
+PASSAGE_ID: hp_008
+TOPIC: Jay-Z sports ownership
+Jay-Z, the American rapper and business mogul, has had various sports investments. He previously held a minority ownership stake in the Brooklyn Nets NBA basketball team. He later sold his ownership stake but remained involved in entertainment ventures connected to the team and arena.
+
+PASSAGE_ID: hp_009
+TOPIC: Python programming language
+Python is a high-level, general-purpose programming language. It was created by Guido van Rossum and first released in 1991. Van Rossum began developing Python in the late 1980s as a successor to the ABC programming language. Python emphasizes code readability and simplicity, supporting multiple programming paradigms.
+
+PASSAGE_ID: hp_010
+TOPIC: Grover Cleveland presidency
+Grover Cleveland served as both the 22nd and 24th President of the United States, making him the only president to serve two non-consecutive terms. He first served from 1885 to 1889 and then again from 1893 to 1897. Benjamin Harrison served between his two terms.

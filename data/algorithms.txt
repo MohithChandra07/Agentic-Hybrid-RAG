@@ -1,0 +1,63 @@
+1. Fundamental Algorithms & DefinitionsMinimum Spanning Trees (MST)The Minimum Spanning Tree (MST) of a connected, undirected, weighted graph $G$ is a subgraph that is a tree, covers all vertices, contains $|V|-1$ edges, and has the minimum total cost among all possible spanning trees
+.Kruskal's AlgorithmIt is a greedy algorithm used to find the MST.Process: Sort edges by non-decreasing weight3333. Add edges one by one, ensuring the edge does not form a cycle with previously selected edges4444.Disjoint-Set Structure: Uses Make-set, Find-set, and Union operations to manage sets of vertices and detect cycles
+.Optimization: The running time is significantly improved using Union-by-Rank and Path Compression heuristics, resulting in a total time complexity of $O(E \log E + E \cdot \alpha(V))$, which simplifies to $O(E \log E)$ in most cases6666.Shortest Path AlgorithmsBellman-Ford AlgorithmSolves the single-source shortest path problem in general cases where edge weights may be negative.It returns TRUE if there are no negative-weight cycles reachable from the source, and FALSE otherwise.The core logic involves iterating $V-1$ times and performing the Relax operation on every edge.Dijkstra's algorithm assumes all edge weights are nonnegative10.Graph TraversalBreadth-First Search (BFS): Uses a queue as an auxiliary structure. It examines nodes layer by layer: the starting node, then all its neighbours, then all neighbors of neighbors, and so on.Depth-First Search (DFS): Uses a stack. It explores as far as possible along each path before backtracking.
+
+
+2. Sorting and Data StructuresNon-Comparative SortingCounting SortIt is a non-comparative integer sorting algorithm15.Characteristics: Provides linear time complexity of $O(n+k)$16161616. It's fast because it assumes the input consists of integers in a small range $0$ to $k$.Steps: 1. Count occurrences. 2. Calculate cumulative counts to determine final positions. 3. Place elements directly into the output array18181818.Radix SortIt is a non-comparative algorithm that sorts numbers by processing individual digits19.Subroutine: It uses Counting Sort as a stable sort subroutine.Process: Typically processes digits from the Least Significant Digit (LSD) to the most significant21.Bucket SortAssumption: Assumes the input is drawn from a uniform distribution over an interval (e.g., $[0, 1)$).Process: Divides the interval into $n$ equal-sized buckets, sorts each bucket individually (often using Insertion Sort), and then concatenates them2.Average Case Complexity: $O(n+k)$24.Other SortingSelection SortComplexity: $O(n^2)$ in the best, average, and worst cases25.Use Case: Suitable only for small data sets due to its quadratic time complexity.
+
+3. Complexity Classes (P vs. NP)Decision Problem: A computational problem where the answer is binary (yes or no).
+Class P:Consists of decision problems that are solvable in polynomial time.
+An algorithm is efficient if its worst-case running time is $O(n^c)$29.Class NP: (Nondeterministic Polynomial Time)Comprises the set of languages (problems) for which a 'Yes' answer can be efficiently verified in polynomial time.The core idea is the existence of a verification algorithm that takes an input $x$ and a certificate $y$ (a solution/proof) and checks its validity in polynomial time.Example: For the Hamiltonian Cycle problem, the certificate is the cycle itself, which is easily verifiable in polynomial time.P vs. NP: The set of problems in $P$ is a subset of $NP$ ($P \subseteq NP$). Whether $P$ and $NP$ are equivalent is a major unsolved problem.NP-Hard and NP-Complete (NPC)NP-Hard: A problem is NP-hard if every problem in NP can be efficiently reduced to it through polynomial-time reducibility. This means the problem is at least as hard as the hardest problems in NP35.NP-Complete: A language $L$ is NP-Complete if it is NP-Hard and also belongs to NP ($L \in NP$).Key NP-Complete Problems: 3-CNF SAT, Clique Problem, Vertex Cover Problem, and the Traveling Salesman Problem
+
+1. Advanced Algorithm Paradigms
+
+Dynamic Programming vs. Greedy Algorithms
+
+Dynamic Programming always yields the optimal result. It follows a bottom-up approach and uses recurrence functions, which makes it more complex. The choice of solution depends on optimal solutions to subproblems. Typical applications include Matrix Chain Multiplication, All-Pairs Shortest Path using Floyd-Warshall, and the 0-1 Knapsack problem.
+
+Greedy Algorithms may or may not yield the optimal result. They follow a top-down approach and do not use recurrence functions, making them easier to apply. The choice is based on what looks best at the moment, known as the local optimum. Typical applications include Kruskal’s Minimum Spanning Tree, Activity Selection, Fractional Knapsack, and Huffman Coding.
+
+Backtracking Algorithms
+
+Backtracking is a general algorithm that explores all potential solutions by building a solution step by step and backtracks if a path fails. The time complexity is generally O(2^n) for problems like Subset Sum and O(N!) for the N-Queens Problem. Key problems solved using backtracking include the N-Queens Problem, Subset Sum Problem, and Hamiltonian Cycles. Performance can be improved using pruning or dynamic programming.
+
+2. Graph Algorithms
+
+Minimum Spanning Tree
+
+A Minimum Spanning Tree of a connected, undirected, weighted graph is a tree that covers all vertices, contains V-1 edges, and has the minimum total cost among all spanning trees.
+
+Kruskal’s Algorithm is a greedy approach that selects edges in non-decreasing order of weight and ensures no cycles are formed using a Disjoint-Set data structure with Union-by-Rank and Path Compression. Its time complexity is O(E log E).
+
+Graph Traversal
+
+Breadth-First Search uses a queue and examines nodes level by level. Depth-First Search uses a stack and explores paths as far as possible before backtracking.
+
+Shortest Paths
+
+The Bellman-Ford Algorithm solves the single-source shortest path problem even when negative edge weights are present. It performs the relax operation on every edge V-1 times and detects negative-weight cycles.
+
+The Floyd-Warshall Algorithm solves the all-pairs shortest path problem using dynamic programming with time complexity O(V^3). Dijkstra’s Algorithm is faster but requires nonnegative edge weights.
+
+3. Encoding and String Algorithms
+
+Huffman Coding
+
+Huffman Coding is a greedy algorithm used for data compression. It creates a variable-length, prefix-free code to minimize message length. The prefix property ensures that no character code is the prefix of another. The construction process repeatedly combines the two nodes with the smallest frequency.
+
+Pattern Matching
+
+The Rabin-Karp Algorithm uses hashing with a large prime number. The automata-based pattern matching algorithm uses a finite automaton to achieve linear time complexity. The KMP Algorithm uses a prefix function to achieve O(n) matching time.
+
+4. Complexity Classes P vs NP
+
+Class P consists of decision problems that can be solved in polynomial time.
+
+Class NP consists of problems whose solutions can be verified in polynomial time using a certificate.
+
+NP-Hard problems are at least as hard as the hardest problems in NP.
+
+NP-Complete problems are both NP-Hard and belong to NP.
+
+Important NP-Complete problems include 3-CNF SAT, Clique Problem, Vertex Cover Problem, and the Traveling Salesman Problem.
+

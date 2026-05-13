@@ -1,0 +1,66 @@
+[
+    {
+        "id": "faq_01",
+        "query": "What two conditions must a problem meet to be classified as NP-Complete?",
+        "expected_answer": "It must be in class NP (verifiable in polynomial time) and it must be NP-Hard (all other NP problems can be reduced to it in polynomial time).",
+        "gold_documents": ["np_completeness_rules"],
+        "difficulty": "easy",
+        "category": "factual_qa"
+    },
+    {
+        "id": "faq_02",
+        "query": "How does the Bellman-Ford algorithm detect a negative-weight cycle?",
+        "expected_answer": "By relaxing all edges V-1 times, and then doing one more pass. If any distance decreases in the final pass, a negative cycle exists.",
+        "gold_documents": ["bellman_ford_description"],
+        "difficulty": "easy",
+        "category": "factual_qa"
+    },
+    {
+        "id": "multi_01",
+        "query": "Compare the time complexity of Rabin-Karp with KMP when matching a pattern.",
+        "expected_answer": "Rabin-Karp has an average complexity of O(n+m) but worst-case O(nm) due to hash collisions. KMP guarantees O(n+m) worst-case time.",
+        "gold_documents": ["rabin_karp", "kmp_algorithm"],
+        "difficulty": "medium",
+        "category": "multi_hop_qa"
+    },
+    {
+        "id": "multi_02",
+        "query": "What advantage does Bellman-Ford have over Dijkstra's algorithm regarding graph structures?",
+        "expected_answer": "Bellman-Ford can handle graphs with negative edge weights, whereas Dijkstra's algorithm fails if negative weights are present.",
+        "gold_documents": ["bellman_ford", "dijkstra_limits"],
+        "difficulty": "medium",
+        "category": "multi_hop_qa"
+    },
+    {
+        "id": "stress_01",
+        "query": "What is the recipe for baking a chocolate cake?",
+        "expected_answer": "I cannot answer this question based on the provided documents.",
+        "gold_documents": [],
+        "difficulty": "hard",
+        "category": "hallucination_stress_test"
+    },
+    {
+        "id": "stress_02",
+        "query": "Which sorting algorithm operates in exactly O(1) time complexity?",
+        "expected_answer": "There is no general sorting algorithm that operates in O(1) time.",
+        "gold_documents": [],
+        "difficulty": "hard",
+        "category": "hallucination_stress_test"
+    },
+    {
+        "id": "ambig_01",
+        "query": "What does the document say about algorithm rules?",
+        "expected_answer": "The query is too vague to provide a specific algorithm rule.",
+        "gold_documents": [],
+        "difficulty": "hard",
+        "category": "ambiguous_retrieval"
+    },
+    {
+        "id": "ambig_02",
+        "query": "How does it find the shortest path?",
+        "expected_answer": "Please specify which algorithm you are referring to (e.g., Dijkstra, Bellman-Ford, Floyd-Warshall).",
+        "gold_documents": [],
+        "difficulty": "hard",
+        "category": "ambiguous_retrieval"
+    }
+]

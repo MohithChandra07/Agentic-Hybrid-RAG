@@ -1,0 +1,39 @@
+PASSAGE_ID: tqa_001
+TOPIC: Iron Man / Robert Downey Jr.
+Robert Downey Jr. portrayed Tony Stark, also known as Iron Man, in the Marvel Cinematic Universe (MCU). He first appeared in the role in Iron Man (2008), which launched the MCU. He reprised the role in numerous films including The Avengers, Iron Man 2, Iron Man 3, Avengers: Age of Ultron, Captain America: Civil War, Spider-Man: Homecoming, Avengers: Infinity War, and Avengers: Endgame (2019), where his character sacrificed himself to save the universe.
+
+PASSAGE_ID: tqa_002
+TOPIC: Chemical symbol for Gold
+Gold is a chemical element with the symbol Au and atomic number 79. The symbol Au comes from the Latin word "aurum," meaning gold. Gold is a dense, soft, shiny, and malleable metal. It is one of the least reactive chemical elements and is solid under standard conditions. Gold has been used throughout history as currency and in jewelry.
+
+PASSAGE_ID: tqa_003
+TOPIC: Pride and Prejudice
+Pride and Prejudice is a romantic novel written by Jane Austen, published in January 1813. The story follows the character development of Elizabeth Bennet, the dynamic protagonist who learns about the repercussions of hasty judgments and the value of true love. Jane Austen began writing the novel in 1796, calling it "First Impressions" before revising and renaming it.
+
+PASSAGE_ID: tqa_004
+TOPIC: End of World War II
+World War II ended in 1945. The war in Europe ended on May 8, 1945, known as Victory in Europe (V-E) Day, with Germany's unconditional surrender. The war in the Pacific ended on September 2, 1945, known as Victory over Japan (V-J) Day, following Japan's formal surrender aboard the USS Missouri after the United States dropped atomic bombs on Hiroshima and Nagasaki.
+
+PASSAGE_ID: tqa_005
+TOPIC: Largest planet in solar system
+Jupiter is the largest planet in the solar system. It is the fifth planet from the Sun and has a mass more than twice that of all other planets combined. Jupiter is a gas giant, primarily composed of hydrogen and helium. It has at least 95 known moons, including the four large Galilean moons discovered by Galileo Galilei in 1610.
+
+PASSAGE_ID: tqa_006
+TOPIC: Mona Lisa
+The Mona Lisa is a half-length portrait painting by the Italian Renaissance artist Leonardo da Vinci. It is considered an archetypal masterpiece of the Italian Renaissance and has been described as "the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world." The painting is believed to have been painted between 1503 and 1519. It is housed at the Louvre Museum in Paris.
+
+PASSAGE_ID: tqa_007
+TOPIC: Neil Armstrong and the Moon
+Neil Armstrong was an American astronaut and aeronautical engineer who became the first person to walk on the Moon on July 20, 1969. He commanded the Apollo 11 mission. Upon stepping onto the lunar surface, he famously said: "That's one small step for [a] man, one giant leap for mankind." Buzz Aldrin followed him onto the surface, while Michael Collins orbited above.
+
+PASSAGE_ID: tqa_008
+TOPIC: Capital of Australia
+Canberra is the capital city of Australia. It is located in the Australian Capital Territory (ACT). The city was purpose-built as the nation's capital after federation, as a compromise between the rival cities of Sydney and Melbourne. Construction began in 1913, and it became the capital in 1927 when Parliament House opened. Canberra is home to many of Australia's national institutions.
+
+PASSAGE_ID: tqa_009
+TOPIC: Eiffel Tower
+The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower from 1887 to 1889. It was constructed as the entrance arch for the 1889 World's Fair. It stands 330 metres tall and was the world's tallest man-made structure until the Chrysler Building in New York was completed in 1930.
+
+PASSAGE_ID: tqa_010
+TOPIC: Berlin Wall fall
+The Berlin Wall fell on November 9, 1989. The wall had divided East and West Berlin since 1961. On the night of November 9, following a confused announcement by East German authorities that citizens could cross the border freely, crowds gathered at checkpoints and began dismantling sections of the wall. This event marked a pivotal moment in the end of the Cold War and led to German reunification on October 3, 1990.

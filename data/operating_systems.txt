@@ -1,0 +1,35 @@
+# OPERATING SYSTEMS CONCEPTS DATASET
+
+1. WHAT IS AN OPERATING SYSTEM (OS)?
+An Operating System is a software that acts as an interface between the computer hardware and the user. It manages resources such as the CPU, memory, and I/O devices. Key examples include Windows, macOS, Linux, and Android.
+
+2. PROCESS MANAGEMENT
+A process is a program in execution. The OS manages processes through scheduling (CPU Scheduling).
+- States of a Process: New, Ready, Running, Waiting, Terminated.
+- PCB (Process Control Block): A data structure that contains information about a process (Process ID, Program Counter, CPU Registers, etc.).
+
+3. CPU SCHEDULING ALGORITHMS
+- First-Come, First-Served (FCFS): Simple, but can cause the 'Convoy Effect'.
+- Shortest Job First (SJF): Optimal but hard to predict the length of the next CPU burst.
+- Round Robin (RR): Designed for time-sharing systems. Each process gets a small unit of CPU time (time quantum).
+- Priority Scheduling: CPU is allocated to the process with the highest priority.
+
+4. DEADLOCKS
+A deadlock is a situation where a set of processes are blocked because each process is holding a resource and waiting for another resource held by some other process.
+- Necessary Conditions for Deadlock:
+  1. Mutual Exclusion
+  2. Hold and Wait
+  3. No Preemption
+  4. Circular Wait
+- Deadlock Prevention: Eliminating one of the four conditions.
+- Banker's Algorithm: Used for deadlock avoidance by checking if a system is in a 'safe state'.
+
+5. MEMORY MANAGEMENT
+- Paging: A memory management scheme that eliminates the need for contiguous allocation of physical memory. This scheme permits the physical address space of a process to be non-contiguous.
+- Segmentation: A memory management scheme that supports the user view of memory.
+- Virtual Memory: A technique that allows the execution of processes that are not completely in memory. It uses 'Demand Paging'.
+
+6. FILE SYSTEMS
+A file system provides the mechanism for online storage of and access to both data and programs of the operating system and all the users of the computer system.
+- Directory Structure: Organizes files.
+- Allocation Methods: Contiguous, Linked, and Indexed allocation.

@@ -1,0 +1,36 @@
+# ==========================================
+# RESEARCH-GRADE AGENTIC RAG COMMANDS
+# ==========================================
+
+# 1. Enter the project directory
+cd "/Users/mohithchandra/Documents/RAG.project copy 2"
+
+# 2. Install Dependencies (Including Cross-Encoders and Web Search)
+pip3 install -r requirements.txt
+pip3 install sentence-transformers duckduckgo-search
+
+# 3. Compile the high-speed Apple Silicon GPU engine for offline AI
+CMAKE_ARGS="-DGGML_METAL=on" pip3 install --force-reinstall --no-cache-dir llama-cpp-python
+
+# 4. Build the Local Database (PDF -> Chunks -> BM25 + Vector DB)
+python3 ingest.py
+
+# ==========================================
+# RUNNING THE PROJECT (Choose One)
+# ==========================================
+
+# OPTION A: Run the Beautiful Web Dashboard
+python3 -m streamlit run ui_app.py
+
+# OPTION B: Run the Terminal-based Agentic State Machine
+python3 agentic_rag/backend/graph.py
+
+# ==========================================
+# RUNNING THE ACADEMIC EVALUATION
+# ==========================================
+
+# 5. Run the Benchmark Tests (Tests Latency, Hallucinations, etc.)
+python3 -m evaluation.runner
+
+# 6. Generate the Charts & Graphs for your PowerPoint
+python3 -m evaluation.visualize
