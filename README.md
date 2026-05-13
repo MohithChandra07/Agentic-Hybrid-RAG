@@ -175,8 +175,6 @@ python3 -m streamlit run ui_app.py
 
 The dashboard shows each agent's decisions, context scores, and per-claim hallucination risk scores in real time as a query moves through the pipeline.
 
-> Screenshot → `screenshots/dashboard.png`
-
 ![Dashboard](screenshots/dashboard.png)
 
 ---
