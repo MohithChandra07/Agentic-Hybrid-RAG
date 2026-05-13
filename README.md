@@ -193,7 +193,7 @@ python3 -m evaluation.runner
 python3 -m evaluation.visualize
 ```
 
-> Charts → `diagrams/metrics.png`
+![Benchmark Charts](https://github.com/MohithChandra07/Agentic-Hybrid-RAG/blob/main/diagrams/metrics.png?raw=true)
 
 ### Results
 
