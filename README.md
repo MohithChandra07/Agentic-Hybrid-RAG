@@ -227,4 +227,4 @@ Happy to walk through the design in detail.
 
 ---
 
-*Built by Mohith Chandra · May 2026*
+*Built by Mohith Chandra Gugulothu · May 2026*
