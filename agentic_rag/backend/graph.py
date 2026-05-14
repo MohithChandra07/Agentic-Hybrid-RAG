@@ -47,13 +47,17 @@ def build_graph():
     def decide_to_generate(state: AgentState):
         """Routes from Context Critic based on relevance, confidence, loop safety, and diminishing returns."""
         is_sufficient = state.get("context_sufficient", False)
+        answerability = state.get("answerability_score", 0.0)
         loop_count = state.get("loop_count", 0)
         critic_confidence = state.get("critic_confidence", 1.0)
         retry_history = state.get("retry_history", [])
         
-        if is_sufficient:
-            print("  -> Routing: Context Approved. Proceeding to Generation.")
+        if is_sufficient and answerability >= 0.6:
+            print(f"  -> Routing: Context Approved (Answerability: {answerability}). Proceeding to Generation.")
             return "generator"
+        elif is_sufficient:
+            print(f"  -> Routing: Context marked sufficient but Answerability ({answerability}) is too low. Rejecting.")
+            is_sufficient = False
             
         # 1. Uncertainty Guard: Prevent blind loops if Critic is just guessing
         if critic_confidence < 0.5:

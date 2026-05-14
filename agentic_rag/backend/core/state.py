@@ -27,6 +27,8 @@ class AgentState(TypedDict):
     
     # --- NEW: Critic Structured Outputs ---
     relevance_score: float
+    sufficiency_score: float
+    answerability_score: float
     hallucination_risk_score: float
     critic_confidence: float # Uncertainty estimation
     retry_recommended: bool

@@ -19,6 +19,8 @@ def context_critic_node(state: AgentState) -> AgentState:
             "context_sufficient": False,
             "retry_recommended": True,
             "relevance_score": 0.0,
+            "sufficiency_score": 0.0,
+            "answerability_score": 0.0,
             "hallucination_risk_score": 1.0,
             "critic_reasoning": "Retrieval pipeline returned empty results.",
             "critic_feedback": "Expand the search terms or use broader lexical keywords.",
@@ -34,8 +36,18 @@ def context_critic_node(state: AgentState) -> AgentState:
     You are an expert Context Critic. Your job is to evaluate if the retrieved documents contain sufficient and relevant information to answer the user's query.
     If the context is irrelevant or insufficient, we risk severe hallucination.
     
+    You must evaluate:
+    - topical relevance
+    - factual sufficiency
+    - direct answerability
+    
+    Detect comparative questions, reasoning-heavy questions, and opinion-style questions.
+    If retrieved docs lack direct evidence for these, mark retrieval as INSUFFICIENT to trigger retry or web fallback.
+    
     Respond STRICTLY in the exact following multi-line format:
     RELEVANCE_SCORE: [A number from 0.0 to 1.0]
+    SUFFICIENCY_SCORE: [A number from 0.0 to 1.0]
+    ANSWERABILITY_SCORE: [A number from 0.0 to 1.0]
     CONFIDENCE: [A number from 0.0 to 1.0 indicating your certainty in this evaluation]
     REASONING: [1 sentence explaining why]
     DECISION: [APPROVED or INSUFFICIENT]
@@ -56,6 +68,8 @@ def context_critic_node(state: AgentState) -> AgentState:
     
     # 2. Parse the structured output
     relevance_score = 0.5
+    sufficiency_score = 0.5
+    answerability_score = 0.5
     confidence_score = 0.5
     decision = "INSUFFICIENT"
     reasoning = "Parsing failed."
@@ -64,6 +78,12 @@ def context_critic_node(state: AgentState) -> AgentState:
     try:
         score_match = re.search(r"RELEVANCE_SCORE:\s*([0-9.]+)", evaluation)
         if score_match: relevance_score = float(score_match.group(1))
+        
+        suff_match = re.search(r"SUFFICIENCY_SCORE:\s*([0-9.]+)", evaluation)
+        if suff_match: sufficiency_score = float(suff_match.group(1))
+        
+        ans_match = re.search(r"ANSWERABILITY_SCORE:\s*([0-9.]+)", evaluation)
+        if ans_match: answerability_score = float(ans_match.group(1))
         
         conf_match = re.search(r"CONFIDENCE:\s*([0-9.]+)", evaluation)
         if conf_match: confidence_score = float(conf_match.group(1))
@@ -79,16 +99,18 @@ def context_critic_node(state: AgentState) -> AgentState:
     except Exception as e:
         print(f"  -> Critic parsing error: {e}")
         
-    print(f"  -> Relevance: {relevance_score} | Confidence: {confidence_score} | Decision: {decision}")
+    print(f"  -> Relevance: {relevance_score} | Sufficiency: {sufficiency_score} | Answerability: {answerability_score} | Confidence: {confidence_score} | Decision: {decision}")
     print(f"  -> Reasoning: {reasoning}")
     
-    is_sufficient = (decision == "APPROVED" and relevance_score >= 0.6)
+    is_sufficient = (decision == "APPROVED" and answerability_score >= 0.6)
     
     # 3. Output the structured state
     return {
         "context_sufficient": is_sufficient,
         "retry_recommended": not is_sufficient,
         "relevance_score": relevance_score,
+        "sufficiency_score": sufficiency_score,
+        "answerability_score": answerability_score,
         "hallucination_risk_score": 1.0 - relevance_score, # High relevance = low risk
         "critic_confidence": confidence_score,
         "critic_reasoning": reasoning,
@@ -98,6 +120,8 @@ def context_critic_node(state: AgentState) -> AgentState:
         "retry_history": [{
             "loop": state.get("loop_count", 0),
             "relevance_score": relevance_score,
+            "sufficiency_score": sufficiency_score,
+            "answerability_score": answerability_score,
             "confidence": confidence_score
         }]
     }
