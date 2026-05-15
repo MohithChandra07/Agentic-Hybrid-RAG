@@ -56,16 +56,25 @@ The demo covers:
 
 ## Motivation
 
-This project extends **"RAG-Critic: A Critic-Guided RAG Framework" (ACL 2025)** — a paper that proposed evaluating retrieved context before generation. Three gaps in that design motivated this work:
+This project extends **"RAG-Critic: A Critic-Guided RAG Framework" (ACL 2025)** — a paper that proposed evaluating retrieved context before generation. Six gaps in that design motivated this work:
 
 **Gap 1 — Holistic scoring misses micro-hallucinations.**
-The original critic graded the final answer as a whole, meaning a single hallucinated sentence inside an otherwise correct answer still passes. This system verifies every claim individually at the atomic sentence level.
+The original critic graded the final answer as a whole, meaning a single hallucinated sentence buried inside an otherwise correct answer still passes the gate. This system decomposes every draft into atomic sentences and verifies each one independently against the retrieved evidence, so no individual claim escapes scrutiny.
 
 **Gap 2 — Uniform retrieval regardless of query complexity.**
-A Cross-Encoder reranker was applied to every query, simple or complex. This system uses an adaptive routing policy — simple factual queries get fast `k=3` shallow search; multi-hop reasoning queries get deep `k=10` reranking.
+A Cross-Encoder reranker was applied to every query at a fixed `k`, treating a single-fact lookup the same as a multi-hop reasoning question — wasteful on easy queries and sometimes under-powered on hard ones. This system uses an adaptive routing policy: simple factual queries get fast `k=3` shallow search; complex multi-hop queries get deep `k=10` reranking with a full Cross-Encoder pass.
 
 **Gap 3 — No memory of prior failures.**
-Each failed query started from scratch. This system uses a semantic memory module (ChromaDB) that stores failed query embeddings and adapts retrieval strategy accordingly.
+Every time the system failed on a query type, it started from scratch on the next similar query. There was no mechanism to learn from retrieval dead-ends or repeated failures on the same topic class. This system adds a semantic failure memory module backed by a secondary ChromaDB instance — failed query embeddings and session summaries are stored and consulted before each new retrieval attempt, allowing the system to adapt its strategy over time.
+
+**Gap 4 — Single retrieval source with no fallback.**
+The original framework retrieved exclusively from a static local knowledge base. If the corpus lacked coverage for a query, the system would either hallucinate or return a low-confidence answer with no escalation path. This system adds an autonomous Web Fallback agent that triggers whenever the Context Critic scores local retrieval below threshold — live DuckDuckGo search fills the coverage gap without any manual intervention.
+
+**Gap 5 — No query decomposition for multi-hop questions.**
+The original system passed the raw user query directly to the retriever, which works for single-hop factual lookups but degrades on questions that require chaining multiple pieces of evidence. Without decomposition, the retriever conflates sub-questions and returns noisy, mixed results. This system adds a Planner agent that detects multi-hop structure, breaks the query into ordered sub-queries, and resolves each sequentially with intermediate results passed forward as context.
+
+**Gap 6 — Single critic gate with no targeted retry.**
+The original critic made a one-shot pass/fail decision. If a generated answer was borderline — mostly correct but containing one flawed claim — the entire answer was discarded with no attempt at targeted repair. This system introduces a second critic gate downstream of generation, the Answer Critic, which triggers a targeted retry with refined retrieval parameters rather than a full pipeline restart. Valid portions of the answer are preserved; only the flagged claims are re-grounded.
 
 ---
 
