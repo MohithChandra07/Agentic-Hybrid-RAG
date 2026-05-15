@@ -31,8 +31,8 @@ A multi-agent Retrieval-Augmented Generation system that plans, retrieves, criti
 
 | Resource | Link |
 |---|---|
-| 📄 Full Paper (PDF) | Available upon acceptance |
-| 🗃️ arXiv Preprint | Available upon acceptance |
+| 📄 Full Paper (PDF) | Private during review |
+| 🗃️ arXiv Preprint | To be released after review |
 | 💻 GitHub Repository | [MohithChandra07/Agentic-Hybrid-RAG](https://github.com/MohithChandra07/Agentic-Hybrid-RAG) |
 
 ### Abstract
