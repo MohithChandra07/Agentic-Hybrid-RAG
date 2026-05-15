@@ -25,7 +25,7 @@ A multi-agent Retrieval-Augmented Generation system that plans, retrieves, criti
 | **Authors** | Mohith Chandra Gugulothu
 | **Submitted To** | NortheastGenAI 2026 Workshop (Under Review) |
 | **Submission Date** | May 15, 2026 |
-| **Status** | ⏳ Under Review — not yet accepted or published |
+| **Status** | ⏳ Under Review |
 
 ### Access
 
