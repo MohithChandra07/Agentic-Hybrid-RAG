@@ -34,7 +34,7 @@ If you find this work useful, please cite:
   author    = {Mohith Chandra Gugulothu},
   journal   = {[Venue — IEEE/arXiv, coming soon]},
   year      = {2026},
-  url       = {[Paper URL — coming soon]}
+  url       = {https://github.com/MohithChandra07/Agentic-Hybrid-RAG/blob/main/paper/MOHITH_CHANDRA_BTP_MBA.pdf}
 }
 ```
 
