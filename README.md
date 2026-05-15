@@ -22,7 +22,7 @@ A multi-agent Retrieval-Augmented Generation system that plans, retrieves, criti
 | Field | Details |
 |---|---|
 | **Title** | Adaptive Critic-Guided Hybrid Agentic RAG for Improving Retrieval Robustness and Hallucination Resistance Through Multi-Stage Verification |
-| **Authors** | Mohith Chandra Gugulothu, Shreya Yadav, Rishu Kumar, Rajiv Misra |
+| **Authors** | Mohith Chandra Gugulothu
 | **Submitted To** | NortheastGenAI 2026 Workshop (Under Review) |
 | **Submission Date** | May 15, 2026 |
 | **Status** | ⏳ Under Review — not yet accepted or published |
@@ -48,8 +48,7 @@ A formal citation will be available upon acceptance. In the meantime, you may re
   title     = {Adaptive Critic-Guided Hybrid Agentic {RAG} for Improving
                Retrieval Robustness and Hallucination Resistance Through
                Multi-Stage Verification},
-  author    = {Gugulothu, Mohith Chandra and Yadav, Shreya and
-               Kumar, Rishu and Misra, Rajiv},
+  author    = {Mohith Chandra Gugulothu},
   note      = {Submitted to NortheastGenAI 2026 Workshop (under review)},
   year      = {2026},
   month     = {May}
