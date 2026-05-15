@@ -4,7 +4,7 @@
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://python.org)
 [![LangGraph](https://img.shields.io/badge/framework-LangGraph-orange)](https://github.com/langchain-ai/langgraph)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Paper](https://img.shields.io/badge/paper-IEEE--style-purple)](#research-paper)
+[![Paper](https://img.shields.io/badge/paper-NortheastGenAI%202026-purple)](#research-paper)
 [![Demo](https://img.shields.io/badge/demo-watch%20video-red)](https://youtube.com/your-demo-link)
 
 > **7 agents. Real-time claim verification. Zero hallucinations on test queries.**
@@ -15,7 +15,19 @@ A multi-agent Retrieval-Augmented Generation system that plans, retrieves, criti
 
 ## Research Paper
 
-> 📄 This project is backed by a full IEEE-style research paper documenting the system design, ablation study, and benchmark evaluation.
+> 📄 This project is the implementation of a peer-reviewed workshop paper submitted to **NortheastGenAI 2026**, documenting the full system design, multi-stage critic architecture, adaptive retrieval policy, and benchmark evaluation against a standard RAG baseline.
+
+### Publication
+
+| Field | Details |
+|---|---|
+| **Title** | Adaptive Critic-Guided Hybrid Agentic RAG for Improving Retrieval Robustness and Hallucination Resistance Through Multi-Stage Verification |
+| **Authors** | Mohith Chandra Gugulothu, Shreya Yadav, Rishu Kumar, Rajiv Misra |
+| **Venue** | NortheastGenAI 2026 Workshop |
+| **Date** | May 15, 2026 |
+| **Status** | Submitted |
+
+### Access
 
 | Resource | Link |
 |---|---|
@@ -23,17 +35,24 @@ A multi-agent Retrieval-Augmented Generation system that plans, retrieves, criti
 | 🗃️ arXiv Preprint | `[arXiv — link coming soon]` |
 | 💻 GitHub Repository | [MohithChandra07/Agentic-Hybrid-RAG](https://github.com/MohithChandra07/Agentic-Hybrid-RAG) |
 
+### Abstract
+
+Standard RAG systems retrieve documents and generate answers without any verification step — producing confident, ungrounded outputs when retrieval fails. This paper proposes a multi-agent critic-guided framework that addresses this through three mechanisms: an adaptive retrieval policy that routes queries by complexity, a dual-stage critic architecture that gates both context quality and answer quality independently, and an atomic claim verifier that decomposes generated answers into individual sentences for per-claim hallucination scoring. A semantic failure memory module further enables the system to adapt retrieval strategy based on prior session failures. Evaluated against a standard RAG baseline, the proposed system achieves 100% faithfulness and 0% hallucination rate on the test set, at the cost of a 3× latency increase attributable to the multi-agent verification overhead.
+
 ### Citation
 
-If you find this work useful, please cite:
+If you use this work, please cite:
 
 ```bibtex
-@article{MohithChandra2026criticrag,
-  title     = {Critic-Guided Agentic Hybrid RAG: Atomic Claim Verification
-               and Adaptive Retrieval for Hallucination-Free Generation},
-  author    = {Mohith Chandra Gugulothu},
-  journal   = {[Venue — IEEE/arXiv, coming soon]},
+@inproceedings{gugulothu2026adaptivecritic,
+  title     = {Adaptive Critic-Guided Hybrid Agentic {RAG} for Improving
+               Retrieval Robustness and Hallucination Resistance Through
+               Multi-Stage Verification},
+  author    = {Gugulothu, Mohith Chandra and Yadav, Shreya and
+               Kumar, Rishu and Misra, Rajiv},
+  booktitle = {NortheastGenAI 2026 Workshop},
   year      = {2026},
+  month     = {May},
   url       = {https://github.com/MohithChandra07/Agentic-Hybrid-RAG/blob/main/paper/MOHITH_CHANDRA_BTP_MBA.pdf}
 }
 ```
