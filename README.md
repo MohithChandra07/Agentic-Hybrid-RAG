@@ -4,7 +4,7 @@
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://python.org)
 [![LangGraph](https://img.shields.io/badge/framework-LangGraph-orange)](https://github.com/langchain-ai/langgraph)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Paper](https://img.shields.io/badge/paper-NortheastGenAI%202026-purple)](#research-paper)
+[![Paper](https://img.shields.io/badge/paper-under%20review-yellow)](#research-paper)
 [![Demo](https://img.shields.io/badge/demo-watch%20video-red)](https://youtube.com/your-demo-link)
 
 > **7 agents. Real-time claim verification. Zero hallucinations on test queries.**
@@ -15,24 +15,24 @@ A multi-agent Retrieval-Augmented Generation system that plans, retrieves, criti
 
 ## Research Paper
 
-> 📄 This project is the implementation of a peer-reviewed workshop paper submitted to **NortheastGenAI 2026**, documenting the full system design, multi-stage critic architecture, adaptive retrieval policy, and benchmark evaluation against a standard RAG baseline.
+> 📄 This project is accompanied by a research paper currently under review for the **NortheastGenAI 2026 Workshop**, documenting the full system design, multi-stage critic architecture, adaptive retrieval policy, and benchmark evaluation against a standard RAG baseline.
 
-### Publication
+### Submission Details
 
 | Field | Details |
 |---|---|
 | **Title** | Adaptive Critic-Guided Hybrid Agentic RAG for Improving Retrieval Robustness and Hallucination Resistance Through Multi-Stage Verification |
 | **Authors** | Mohith Chandra Gugulothu, Shreya Yadav, Rishu Kumar, Rajiv Misra |
-| **Venue** | NortheastGenAI 2026 Workshop |
-| **Date** | May 15, 2026 |
-| **Status** | Submitted |
+| **Submitted To** | NortheastGenAI 2026 Workshop (Under Review) |
+| **Submission Date** | May 15, 2026 |
+| **Status** | ⏳ Under Review — not yet accepted or published |
 
 ### Access
 
 | Resource | Link |
 |---|---|
-| 📄 Full Paper (PDF) | [Download PDF](paper/MOHITH_CHANDRA_BTP_MBA.pdf) |
-| 🗃️ arXiv Preprint | `[arXiv — link coming soon]` |
+| 📄 Full Paper (PDF) | Available upon acceptance |
+| 🗃️ arXiv Preprint | Available upon acceptance |
 | 💻 GitHub Repository | [MohithChandra07/Agentic-Hybrid-RAG](https://github.com/MohithChandra07/Agentic-Hybrid-RAG) |
 
 ### Abstract
@@ -41,19 +41,18 @@ Standard RAG systems retrieve documents and generate answers without any verific
 
 ### Citation
 
-If you use this work, please cite:
+A formal citation will be available upon acceptance. In the meantime, you may reference this work as:
 
 ```bibtex
-@inproceedings{gugulothu2026adaptivecritic,
+@unpublished{gugulothu2026adaptivecritic,
   title     = {Adaptive Critic-Guided Hybrid Agentic {RAG} for Improving
                Retrieval Robustness and Hallucination Resistance Through
                Multi-Stage Verification},
   author    = {Gugulothu, Mohith Chandra and Yadav, Shreya and
                Kumar, Rishu and Misra, Rajiv},
-  booktitle = {NortheastGenAI 2026 Workshop},
+  note      = {Submitted to NortheastGenAI 2026 Workshop (under review)},
   year      = {2026},
-  month     = {May},
-  url       = {https://github.com/MohithChandra07/Agentic-Hybrid-RAG/blob/main/paper/MOHITH_CHANDRA_BTP_MBA.pdf}
+  month     = {May}
 }
 ```
 
