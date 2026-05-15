@@ -28,10 +28,10 @@ A multi-agent Retrieval-Augmented Generation system that plans, retrieves, criti
 If you find this work useful, please cite:
 
 ```bibtex
-@article{gugulothu2026criticrag,
+@article{MohithChandra2026criticrag,
   title     = {Critic-Guided Agentic Hybrid RAG: Atomic Claim Verification
                and Adaptive Retrieval for Hallucination-Free Generation},
-  author    = {Gugulothu, Mohith Chandra},
+  author    = {Mohith Chandra Gugulothu},
   journal   = {[Venue — IEEE/arXiv, coming soon]},
   year      = {2026},
   url       = {[Paper URL — coming soon]}
