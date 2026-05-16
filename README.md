@@ -5,7 +5,7 @@
 [![LangGraph](https://img.shields.io/badge/framework-LangGraph-orange)](https://github.com/langchain-ai/langgraph)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Paper](https://img.shields.io/badge/paper-under%20review-yellow)](#research-paper)
-[![Demo](https://img.shields.io/badge/demo-watch%20video-red)]([https://youtube.com/your-demo-link](https://youtu.be/riJtCR9i87Y))
+[![Demo](https://img.shields.io/badge/demo-watch%20video-red)](https://youtu.be/riJtCR9i87Y)
 
 > **7 agents. Real-time claim verification. Zero hallucinations on test queries.**
 
